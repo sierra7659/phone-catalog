@@ -1,0 +1,14 @@
+{
+  "name": "phone-catalogue",
+  "version": "0.0.1",
+  "description": "product catalogue of phones app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rubén Díaz Bernardo",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.0"
+  }
+}
