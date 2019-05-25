@@ -1,0 +1,18 @@
+
+
+.phone-card {
+    width: 150px;
+    background: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 18px;
+    box-shadow: -5px 3px 20px 0px #666;
+}
+
+.phone-detail {
+    width: 100%;
+    color: white !important;
+    background: #3943B7;
+    border-radius: 12px;
+    padding: 8px 0;
+}

@@ -1,10 +1,17 @@
-import React, { Fragment } from 'react';
+import React from 'react';
+import Phone from '../phone/index';
+import {Row , Col} from 'react-bootstrap';
+import './styles.css';
 
 function PhonesPage(props) {
     return (
-        <Fragment>
-            xd
-        </Fragment>
+        <div className="padding-20">
+            <Row>          
+                    {props.phones.map(ph => 
+                        <Phone key={ph.id} phone={ph}/>)
+                    }
+            </Row>
+        </div>
     );
 }
 
