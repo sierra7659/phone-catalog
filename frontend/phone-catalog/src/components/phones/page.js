@@ -4,14 +4,15 @@ import {Row , Col} from 'react-bootstrap';
 import './styles.css';
 
 function PhonesPage(props) {
+
     return (
-        <div className="padding-20">
-            <Row>          
+        <Col md={12} className="padding-20">
+            <Row>            
                     {props.phones.map(ph => 
                         <Phone key={ph.id} phone={ph}/>)
                     }
-            </Row>
-        </div>
+            </Row>     
+        </Col>
     );
 }
 

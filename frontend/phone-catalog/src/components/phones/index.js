@@ -5,7 +5,9 @@ import {getPhones,getPhonesPending,getPhonesError} from '../../redux/reducers/re
 import fetchPhones from '../../api/phoneCatalogProvider';
 import PhonesPage from './page';
 import Spinner from '../spinner';
+import { Alert,Container,Col } from 'react-bootstrap';
 import Navbar from '../navbar/index';
+import './styles.css';
 
 
 class PhoneList extends Component {
@@ -24,20 +26,36 @@ class PhoneList extends Component {
     }
 
     render () {
+        
         const {phones, error, loading} = this.props;
-        console.log(phones);
-        if (error || loading){
+
+        if (loading){
             return(
                 <Fragment>
                     <Navbar />
                     <Spinner />
                 </Fragment>
             );
+        }
+        if(error){
+            return(
+                <Fragment>
+                    <Navbar />
+                    <Container>
+                        <Col md={{span:4,offset:4}}>                        
+                            <Alert variant="danger" className="text-center center-alert">
+                                <div>Can't connect with server</div>
+                                <b onClick={()=> document.location.reload(true)} style={{cursor: 'pointer'}} >Try to Refresh</b>
+                            </Alert>
+                        </Col>
+                    </Container>
+                </Fragment>
+            );
         } 
 
         return (
                 <Fragment>
-                    <Navbar />
+                    <Navbar/>
                     <PhonesPage phones={phones} />
                 </Fragment>
         ) 

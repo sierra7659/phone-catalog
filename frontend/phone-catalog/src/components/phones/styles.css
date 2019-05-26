@@ -1,4 +1,12 @@
 
 .padding-20 {
-    padding: 50px 80px !important;
+    padding-top: 50px !important;
+}
+
+.flow-root {
+    display: flow-root;
+}
+
+.center-alert {
+    margin-top:45%;
 }

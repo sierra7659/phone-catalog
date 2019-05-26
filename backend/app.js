@@ -5,10 +5,6 @@ var app = express();
 
 var PATH_IMAGES = "/phone-catalog/images/";
 
-app.listen(4000, () => {
-    console.log("Server running on port 4000");
-});
-
 app.use((req, res, next) => {
     res.set({
         'Access-Control-Allow-Origin': '*',
@@ -17,6 +13,12 @@ app.use((req, res, next) => {
     })
     next();
 })
+
+app.listen(4000, () => {
+    console.log("Server running on port 4000");
+});
+
+
 
 app.get("/phone-list", async (req, res, next) => {
 
